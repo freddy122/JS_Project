@@ -1,0 +1,55 @@
+include mixins
+block content
+html
+	head
+		title Application orimbato
+		link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+		script(src='/bootstrap/js/jquery.js')
+		script(src='/bootstrap/js/bootstrap.min.js')
+	body
+		nav.navbar.navbar-default(role="navigation")
+			.navbar-header
+				a.navbar-brand(href="#") Gestion tache
+			#navbar-inverse.collapse.navbar-collapse
+				ul.nav.navbar-nav
+					li.active: a(href="accueil") Accueil
+					li: a(href="#Apropos") Apropos
+					li: a(href="#contact") Contact
+					li.dropdown
+						a.dropdown-toggle(href="#",data-toggle="dropdown",role="button",aria-expanded="false") Dropdown
+							span.caret
+						ul.dropdown-menu( role="menu")
+							li: a( href="#") Action
+							li: a( href="#") Autre
+							li: a( href="#") Autre_2
+							li.divider
+							li.dropdown-header Nav header
+							li: a( href="#") Separated link
+		.row
+			.col-md-4.col-sm-6.col-xs-12
+			.col-md-4.col-sm-6.col-xs-12
+			.col-md-4.col-sm-6.col-xs-12
+		.panel.panel-default.col-md-4.col-sm-6.col-xs-12
+			.panel-heading Panel heading
+			.panel-body ceci est un pannel que vous pouvez utiliser
+		.panel.panel-default.col-md-4.col-sm-6.col-xs-12
+			.panel-heading Panel heading
+			.panel-body ceci est un pannel que vous pouvez utiliser
+		.panel.panel-default.col-md-4.col-sm-6.col-xs-12
+			.panel-heading Panel heading
+			.panel-body ceci est un pannel que vous pouvez utiliser
+		a.btn.btn-default Default
+		a.btn.btn-primary( href="link.htm" ) Primary
+		.jumbotron
+			h1 Hello, world!
+			p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+		.list-group
+			.list-group-item( href="#" )
+				h4.list-group-item-heading List group item heading
+				p.list-group-item-text Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+			.list-group-item( href="#" )
+				h4.list-group-item-heading List group item heading
+				p.list-group-item-text Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+			.list-group-item( href="#" )
+				h4.list-group-item-heading List group item heading
+				p.list-group-item-text Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.

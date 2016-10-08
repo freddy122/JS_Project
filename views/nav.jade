@@ -1,0 +1,40 @@
+include mixins
+block content
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/dist/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/dist/css/navbar-fixed-top.css')
+		link(rel='stylesheet', href='/dist/font-awesome/4.2.0/css/font-awesome.min.css')
+		link(rel='stylesheet', href='/dist/css/dataTables.bootstrap.css')
+		script(src='/bootstrap/js/jquery.js')
+		script(src='/dist/js/bootstrap.min.js')
+		script(src='/dist/js/jquery.dataTables.js')
+		script(src='/dist/js/dataTables.bootstrap.js')
+		script(src='/script.js')
+	body
+		nav.navbar.navbar-default.navbar-fixed-top(role="navigation")
+			.navbar-header
+				button.navbar-toggle.collapsed(data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+					span.sr-only
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href="/") Gestion tache
+			#navbar.collapse.navbar-collapse
+				ul.nav.navbar-nav
+					li.active: a(href="accueil") Accueil
+					li: a(href="liste_tache") Liste
+					li: a(href="visual_plannif") Planification Tache
+					li: a(href="userlist") Liste utilisateur
+					li.dropdown
+						a.dropdown-toggle(href="#",data-toggle="dropdown",role="button",aria-expanded="false") Rechercher
+							span.caret
+						ul.dropdown-menu( role="menu")
+							li: a( href="#") Action
+							li: a( href="#") Autre
+							li: a( href="#") Autre_2
+							li.divider
+							li.dropdown-header Nav header
+							li: a( href="#") Separated link
+		

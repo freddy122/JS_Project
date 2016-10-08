@@ -1,0 +1,53 @@
+include nav
+.container
+	h1 Liste des utilisateur
+	#results
+	table#data_user.table.table-striped.table-bordered.table-hover
+		thead
+			tr
+				th Nom
+				th Prénom
+				th Numeros Télephone
+				th Adresse
+				th Nom utilisateur
+				th Mot de passe
+				th Action
+		tbody
+			each user, i in userlist
+				tr
+					td #{user.name}
+					td #{user.lastname}
+					td #{user.phone_number}
+					td #{user.adresse}
+					td #{user.username}
+					td #{user.password}
+					td 
+						a.green(href="javascript:void(0);",data-toggle="modal" ,data-target="#myModal",rel="#{user._id}",class="modif_u")
+							i.ace-icon.fa.fa-search-plus.bigger-130
+						&nbsp;&nbsp;&nbsp
+						a.green(href="javascript:void(0);",data-toggle="modal" ,data-target="#modifier",rel="#{user._id}",class="modif_u")
+							i.ace-icon.fa.fa-pencil.bigger-130
+						&nbsp;&nbsp;&nbsp
+						a.green(href="#" class="linkdeleteuser" rel="#{user._id}")
+							i.ace-icon.fa.fa-trash-o.bigger-130
+	a.btn.btn-primary.btn-lg(type="button",href="ajoutUtilisateur") Ajouter un utilisateur
+	div(class="modal fade",id="myModal",tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
+		.modal-dialog
+			.modal-content
+				.modal-header
+					button(type="button",class="close",data-dismiss="modal",aria-hidden="true") &times;
+					h4(class="modal-title",id="myModalLabel") 
+				.modal-body content
+				.modal-footer
+					button(type="button",class="btn btn-default",data-dismiss="modal") fermer
+					button(type="button",class="btn btn-primary") enregistrer	
+	div(class="modal fade",id="modifier",tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
+		.modal-dialog
+			.modal-content
+				.modal-header
+					button(type="button",class="close",data-dismiss="modal",aria-hidden="true") &times;
+					h4(class="modal-title",id="myModalLabel") 
+				div(class="modal-body",id="div_modif") content
+				.modal-footer
+					button(type="button",class="btn btn-default",data-dismiss="modal") fermer
+					button(type="button",class="btn btn-primary") enregistrer

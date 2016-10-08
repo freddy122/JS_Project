@@ -1,0 +1,25 @@
+.container
+	div(class="col-lg-6",style="margin:-16px -15px;padding: 10px;")
+		.pannel.panel-primary
+			.panel-heading Modifier Utilisateur
+			.panel-body
+				.row
+					form(role="form",name="adduser",method="post")
+						.form-group
+							label Nom
+							input.form-control(name="nom" required="true")
+						.form-group
+							label Prénom
+							input.form-control(name="prenom" required="true")
+						.form-group
+							label Numéros télephone
+							input.form-control(name="telephone" required="true")
+						.form-group
+							label Adresse
+							input.form-control(name="adresse" required="true")
+						.form-group
+							label Nom utilisateur
+							input.form-control(name="username" required="true")
+						.form-group
+							label email utilisateur
+							input.form-control(name="email" required="true")

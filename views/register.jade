@@ -1,0 +1,18 @@
+include nav
+.content
+	if(error && error.lengh>0)
+		br
+		h4.error-msg= error
+		br
+	h1 register page
+	p.lead say something worthwhile here.
+	br
+	form(role='form',action='/register',method='post',style='max-width:300px;')
+		.form-group
+			input.form-control(type='text',name='username',placeholder='enter username')
+		.form-group
+			input.form-control(type='password',name='password',placeholder='password')
+		button.btn.btn-default(type='submit') Enregistrer
+		&nbsp;
+		a(href='/')
+			button.btn.btn-primary(type='button') cancel

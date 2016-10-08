@@ -1,0 +1,29 @@
+include nav
+.container
+	h1 Voir Utilisateur
+	.col-lg-8
+		.pannel.panel-primary
+			.panel-heading Voir'Utilisateur
+			.panel-body
+				.row
+					form(role="form")
+						.form-group
+							label Nom
+							input.form-control(name="nom_modif" required="true")
+						.form-group
+							label Prénom
+							input.form-control(name="prenom_modif" required="true")
+						.form-group
+							label Numéros télephone
+							input.form-control(name="telephone_modif" required="true")
+						.form-group
+							label Adresse
+							input.form-control(name="adresse_modif" required="true")
+						.form-group
+							label Nom utilisateur
+							input.form-control(name="username_modif" required="true")
+						.form-group
+							label email utilisateur
+							input.form-control(name="email_modif" required="true")
+						a.btn.btn-danger.btn-lg(href="userlist") retour
+		#results
